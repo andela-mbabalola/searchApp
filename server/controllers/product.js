@@ -15,11 +15,11 @@
             message: 'Product already exists'
           });
         } else {
-          var newProduct = {
+          var newProduct = new Product({
             name: req.body.name,
             category: req.body.category,
             datails: req.body.details
-          };
+          });
           newProduct.save(function(err) {
             if(err) {
               res.send(err);

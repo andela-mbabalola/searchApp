@@ -8,7 +8,7 @@
       .get(productController.getAllProducts);
 
       //create a new product
-    router.route('./product')
+    router.route('/product')
       .post(productController.createProduct);
   }
 

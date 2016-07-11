@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node server.js"
   },
   "repository": {
@@ -34,6 +34,8 @@
     "browserify": "^13.0.1",
     "gulp-jade": "^1.1.0",
     "gulp-nodemon": "^2.1.0",
-    "gulp-util": "^3.0.7"
+    "gulp-util": "^3.0.7",
+    "mocha": "^2.5.3",
+    "supertest": "^1.1.0"
   }
 }

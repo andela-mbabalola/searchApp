@@ -27,7 +27,7 @@
     },
     details: {
       type: String,
-      required: true,
+      required: false,
       validate: {
         validator: function(category) {
           return /\w/.test(category);
