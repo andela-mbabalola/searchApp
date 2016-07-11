@@ -1,0 +1,29 @@
+div(ng-cloak ng-init="init()")
+  input.search(ng-model="searchProduct" placeholder="Search" type="text" required="true")
+  md-content  
+    md-tabs(md-dynamic-height)
+      md-tab(label="Products")
+        md-content.md-padding
+          h3.md-display-2.md-margin.text-center Products
+          md-divider
+          div.md-margin(layout="column" md-padding flex layout-sm="column" layout-md="column" layout-align="center center")
+            md-card
+             md-table-container
+              table(md-table md-progress="promise" style="border:2px")
+                thead(md-head)
+                  th(md-column, md-text)
+                  th(md-column, md-text) Name
+                  th(md-column, md-text) Category
+                  th(md-column, md-text) Detail
+                tbody(md-body)
+                  tr(md-row ng-repeat="product in products | filter:searchProduct")
+                    td(md-cell) {{product.name}}
+                    td(md-cell) {{product.category}}
+                    td(md-cell) {{product.detail}}
+                  md-divider
+                tbody(md-body)
+                  tr(ng-repeat="product in products | filter:searchProduct")
+                  td(md-cell) {{product.name}}
+                  td(md-cell) {{product.category}}
+                  td(md-cell) {{product.detail}}
+            
