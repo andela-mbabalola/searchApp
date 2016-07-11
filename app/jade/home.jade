@@ -11,19 +11,14 @@ div(ng-cloak ng-init="init()")
              md-table-container
               table(md-table md-progress="promise" style="border:2px")
                 thead(md-head)
-                  th(md-column, md-text)
-                  th(md-column, md-text) Name
+                  th(md-column, md-text) Name 
                   th(md-column, md-text) Category
                   th(md-column, md-text) Detail
                 tbody(md-body)
                   tr(md-row ng-repeat="product in products | filter:searchProduct")
                     td(md-cell) {{product.name}}
                     td(md-cell) {{product.category}}
-                    td(md-cell) {{product.detail}}
+                    td(md-cell) {{product.details}}
                   md-divider
-                tbody(md-body)
-                  tr(ng-repeat="product in products | filter:searchProduct")
-                  td(md-cell) {{product.name}}
-                  td(md-cell) {{product.category}}
-                  td(md-cell) {{product.detail}}
+                
             
