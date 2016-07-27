@@ -4,6 +4,7 @@
   var Product = require('./../models/products');
 
   exports.createProduct = function(req,res) {
+    console.log('hello');
     Product.findOne({
       name: req.body.name
     }, function(err, product) {
