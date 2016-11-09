@@ -19,7 +19,7 @@
           var newProduct = new Product({
             name: req.body.name,
             category: req.body.category,
-            datails: req.body.details
+            details: req.body.details
           });
           newProduct.save(function(err) {
             if(err) {
